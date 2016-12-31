@@ -11,10 +11,10 @@
        <div id="header">
        		<div id="container">
        <div class="nav">
-       	    <div class="li"><a href="#header">HOME</a></div>
-       	    <div class="li"><a href="#sec1">INTRO</a></div>
-            <div class="li"><a href="#sec2">DYNAMICS</a></div>
-            <div class="li"><a href="#footer">GALLARY</a></div>
+       	<div class="li" onclick=animateScroll($('#header'))>HOME</div>
+       	<div class="li" onclick=animateScroll($('#sec1'))>INTRO</div>
+            <div class="li" onclick=animateScroll($('#sec2'))>DYNAMICS</div>
+            <div class="li" onclick=animateScroll($('#footer'))>GALLARY</div>
        </div>
        </div>
        	    <div id="p1">
@@ -82,7 +82,7 @@
              <a class="prev" onclick="plusImage(-1)">❮</a>
              <a class="next" onclick="plusImage(1)">❯</a>
       
-       </div>
+       </div><br>
        <div class="markers" style="text-align: center;">
                    <span class="dot" onclick="currentImage(1)"></span>
                    <span class="dot" onclick="currentImage(2)"></span>
@@ -101,40 +101,9 @@
        	   	<div class="img">   <img src="5.jpg"></div>
        	   	<div class="img">   <img src="6.jpg"></div>
        </div>
-       
 
-       <script>
-             var slide = 1;
-
-             showSlides(slide);
-
-             function currentImage(n){
-                  slide = n;
-                  showSlides(slide);
-             }
-
-             function plusImage(n){
-                  slide= slide + n;
-                  showSlides(slide); 
-             }
-
-             function showSlides(n){
-                  var i;
-                  var slides = document.getElementsByClassName("image");
-                  var dots = document.getElementsByClassName("dot");
-
-                  if (n > slides.length) {slide = 1}    
-                  if (n < 1) {slide = slides.length}
-                  for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";  
-                  }
-                  for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                  }
-                  slides[slide-1].style.display = "block";  
-                  dots[slide-1].className += " active";
-             }
-       </script>
+       <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+       <script src="script.js" ></script>
 	
     </body>
 </html>           

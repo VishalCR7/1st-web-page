@@ -14,26 +14,35 @@ a{
 }
 .nav {
 	display: flex;
-	background-color: black;
-	opacity: 0.8;
 	justify-content: space-around;
 	width: 60%;
-	box-shadow: 2px 2px 2px red;
+	cursor:pointer; 
+	margin-top: 3px;
+	
 }
 
 .li {
-	width:25%;
+	width:23%;
 	color: white;
-	font-size: 40px;
+	font-weight: bold;
+	font-size: 30px;
 	text-align: center;
 	overflow: hidden;
+	margin:0 2px;
+	border-left:4px solid white;
+	border-right:4px solid white;
 	
 }
 
 .li:hover {
-	background-color: red;
-	opacity: 0.8;
-	transition: all 0.5s;
+	transition: all 0.3s;
+	border-top: :4px solid white;
+	border-bottom:4px solid white;
+	border-right: 0px;
+	border-left:0px;
+	animation-name: fade;
+  animation-duration: 0.3s
+
 }
 
 #header {
@@ -233,7 +242,7 @@ a{
 }
 
 .image img {
-	height: 700px;
+	height: 600px;
 }
 .dot {
 	border-radius: 50%;
@@ -253,6 +262,7 @@ a{
 	top: 50%;
 	width: auto;
 	cursor: pointer;
+	border-radius: 20%;
 }
 
 .prev:hover, .next:hover {
